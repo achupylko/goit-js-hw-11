@@ -57,6 +57,22 @@ function submitHendler(event) {
     })
     .catch(error => {
       console.log(error.message);
+      iziToast.show({
+        message: `${error.message}`,
+        messageColor: '#FFFFFF',
+        backgroundColor: '#ef4040',
+        position: 'topRight',
+        timeout: 3000,
+        closeOnClick: true,
+        drag: false,
+        pauseOnHover: false,
+        close: false,
+        progressBar: false,
+        animateInside: false,
+        transitionIn: 'fadeIn',
+        transitionOut: 'fadeOut',
+        maxWidth: '432px',
+      });
     })
     .finally(hideLoader);
 
