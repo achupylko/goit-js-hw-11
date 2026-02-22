@@ -54,6 +54,7 @@ function submitHendler(event) {
       }
 
       createGallery(images);
+      form.reset();
     })
     .catch(error => {
       console.log(error.message);
@@ -75,6 +76,4 @@ function submitHendler(event) {
       });
     })
     .finally(hideLoader);
-
-  form.reset();
 }
